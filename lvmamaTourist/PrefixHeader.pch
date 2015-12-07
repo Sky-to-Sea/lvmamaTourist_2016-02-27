@@ -1,0 +1,54 @@
+//
+//  PrefixHeader.pch
+//  lvmamaTourist
+//
+//  Created by Earth on 15/11/28.
+//  Copyright © 2015年 Earth. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+/**
+ *  CALayer拓展
+ */
+#import "CALayer+XibConfiguration.h"
+
+#define BOUNDS [UIScreen mainScreen].bounds
+#define WIDTH  [UIScreen mainScreen].bounds.size.width
+#define HEIGHT [UIScreen mainScreen].bounds.size.height
+
+/**
+ *  api接口
+ */
+// 轮播图片
+#define SCROLLIMAGE @"http://m.lvmama.com/bullet/index.php?s=/Api/getInfos&stationCode=GD&osVersion=4.4.4&lvversion=7.3.2&tagCodes=NSY_BANNER&globalLatitude=23.116613&channelCode=NSY&globalLongitude=112.503564&firstChannel=ANDROID&udid=32830611116237181901081018212529231731126222882525102613&formate=json&secondChannel=BAIDU&lvkey=f0c8625920763182d484fd54192bbe13"
+#define COLORIMAGE @"http://m.lvmama.com/bullet/index.php?s=/Api/getInfos&stationCode=SH&osVersion=4.4.4&lvversion=7.3.2&tagCodes=NSY_NBA,NSY_NSA,NSY_ACTION_L,NSY_ACTION_R,TJHD&globalLatitude=22.583168&channelCode=NSY&globalLongitude=113.870301&firstChannel=ANDROID&udid=32830611116237181901081018212529231731126222882525102613&formate=json&secondChannel=BAIDU&lvkey=9e324f70acc02f8fb448e7979003468a"
+
+
+/**
+ *  测试状态打开LMLog(...)
+ *  非测试状态关闭.
+ */
+#ifdef DEBUG
+#define LMMLog(...) NSLog(__VA_ARGS__)
+#else
+#define LMMLog(...)
+#endif
+
+/**
+ *  AFNetworking框架的配置，解除编译警告
+ */
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+
+
+/**
+ *  
+ */
+
+#endif /* PrefixHeader_pch */
