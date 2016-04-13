@@ -22,7 +22,6 @@
     {
         //  用MJExtension,快速字典转模型.
         Model_scrollImage *model = [Model_scrollImage mj_objectWithKeyValues:dic];
-        
         //  属性名不能用"id",只能手动了.
         model.ide = dic[@"id"];
         

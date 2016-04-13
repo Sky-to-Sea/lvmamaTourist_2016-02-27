@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -15,7 +15,6 @@
                 <subviews>
                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bg8-7N-Sz2">
                         <rect key="frame" x="-1" y="15" width="205" height="145"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="145" id="HVf-Tu-0hQ"/>
                         </constraints>
@@ -30,7 +29,6 @@
                     </imageView>
                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z0e-Gu-6H0">
                         <rect key="frame" x="203" y="15" width="205" height="73"/>
-                        <animations/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
                                 <color key="value" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,7 +40,6 @@
                     </imageView>
                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7r8-k5-g6Z">
                         <rect key="frame" x="203" y="87" width="205" height="73"/>
-                        <animations/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
                                 <color key="value" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,7 +50,6 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                 </subviews>
-                <animations/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="z0e-Gu-6H0" secondAttribute="trailing" constant="-1" id="1Ob-H2-3py"/>
                     <constraint firstItem="bg8-7N-Sz2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-1" id="CNQ-ye-WdY"/>
@@ -71,7 +67,6 @@
                     <constraint firstAttribute="bottom" secondItem="7r8-k5-g6Z" secondAttribute="bottom" constant="-1" id="qUf-Vv-nOX"/>
                 </constraints>
             </tableViewCellContentView>
-            <animations/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="LargeImage" destination="bg8-7N-Sz2" id="rXr-Qb-UEs"/>
@@ -79,7 +74,7 @@
                 <outlet property="smallImageTwo" destination="7r8-k5-g6Z" id="178-3Y-c3m"/>
                 <outlet property="wonderfulHeight" destination="HVf-Tu-0hQ" id="I4V-kr-C5y"/>
             </connections>
-            <point key="canvasLocation" x="753.5" y="295"/>
+            <point key="canvasLocation" x="346.5" y="318"/>
         </tableViewCell>
     </objects>
 </document>

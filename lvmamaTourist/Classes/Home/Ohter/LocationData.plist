@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>city</key>
+	<string>北京天安门</string>
+	<key>latitude</key>
+	<real>39.915156</real>
+	<key>longitude</key>
+	<real>116.404269</real>
+</dict>
+</plist>

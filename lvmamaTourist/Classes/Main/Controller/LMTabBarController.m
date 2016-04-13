@@ -11,6 +11,10 @@
 #import "MicroViewController.h"
 #import "AroundViewController.h"
 #import "ProfileViewController.h"
+#import "FirstViewController.h"
+
+#import "ARAroundViewController.h"
+#import "HomePageViewController.h"
 
 
 @interface LMTabBarController ()
@@ -22,17 +26,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    HomeViewController *home = [[HomeViewController alloc]init];
-    [self addChildViewController:home imageNumber:@"0"];
+    HomePageViewController  *_home = [[HomePageViewController alloc]init];
+    [self addChildViewController:_home imageNumber:@"0"];
+    [_home.navigationController setNavigationBarHidden:YES];
+    [[NSNotificationCenter defaultCenter] addObserver:_home selector:@selector(changeData:) name:@"CHANGE_LOCATION" object:nil];
     
     MicroViewController *micro = [[MicroViewController alloc]init];
     [self addChildViewController:micro imageNumber:@"1"];
     
-    AroundViewController *around = [[AroundViewController alloc]init];
+//    AroundViewController *around = [[AroundViewController alloc]init];
+    ARAroundViewController *around = [[ARAroundViewController alloc]init];
     [self addChildViewController:around imageNumber:@"2"];
+    [[NSNotificationCenter defaultCenter] addObserver:around selector:@selector(changeData:) name:@"CHANGE_LOCATION" object:nil];
     
-    ProfileViewController *profile = [[ProfileViewController alloc]init];
-    [self addChildViewController:profile imageNumber:@"3"];
+//    ProfileViewController *profile = [[ProfileViewController alloc]init];
+//    [self addChildViewController:profile imageNumber:@"3"];
+    
+    self.selectedIndex = 0;
+    
+    [self.navigationController setNavigationBarHidden:YES];
+    
+    [[UINavigationBar appearance]setBarTintColor:PurpleColor];
     
 }
 

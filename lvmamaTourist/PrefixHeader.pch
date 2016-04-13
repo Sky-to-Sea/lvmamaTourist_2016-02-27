@@ -6,39 +6,84 @@
 //  Copyright © 2015年 Earth. All rights reserved.
 //
 
-#ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 
+
+#import "HttpQuery.h"
+#import "HttpServiceDelegate.h"
+#import "HttpServiceResult.h"
+#import "MApi.h"
+#import "MXMLReader.h"
+#import "MBaseViewController.h"
+
+#import "GiFHUD.h"
+
 /**
  *  CALayer拓展
  */
 #import "CALayer+XibConfiguration.h"
+/**
+ *  UIView拓展
+ */
+#import "UIView+Extension.h"
 
 #define BOUNDS [UIScreen mainScreen].bounds
 #define WIDTH  [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
 
+#define APPDELEGATE     ((AppDelegate*)[[UIApplication sharedApplication] delegate])
+
+#define PurpleColor [UIColor colorWithRed:210/256.0 green:6/256.0 blue:133/256.0 alpha:1]
 /**
  *  api接口
  */
-// 轮播图片
-#define SCROLLIMAGE @"http://m.lvmama.com/bullet/index.php?s=/Api/getInfos&stationCode=GD&osVersion=4.4.4&lvversion=7.3.2&tagCodes=NSY_BANNER&globalLatitude=23.116613&channelCode=NSY&globalLongitude=112.503564&firstChannel=ANDROID&udid=32830611116237181901081018212529231731126222882525102613&formate=json&secondChannel=BAIDU&lvkey=f0c8625920763182d484fd54192bbe13"
-#define COLORIMAGE @"http://m.lvmama.com/bullet/index.php?s=/Api/getInfos&stationCode=SH&osVersion=4.4.4&lvversion=7.3.2&tagCodes=NSY_NBA,NSY_NSA,NSY_ACTION_L,NSY_ACTION_R,TJHD&globalLatitude=22.583168&channelCode=NSY&globalLongitude=113.870301&firstChannel=ANDROID&udid=32830611116237181901081018212529231731126222882525102613&formate=json&secondChannel=BAIDU&lvkey=9e324f70acc02f8fb448e7979003468a"
+//// 轮播图片
+//#define SCROLLIMAGE @"http://m.lvmama.com/bullet/index.php?s=/Api/getInfos&stationCode=GD&osVersion=4.4.4&lvversion=7.3.2&tagCodes=NSY_BANNER&globalLatitude=23.116613&channelCode=NSY&globalLongitude=112.503564&firstChannel=ANDROID&udid=32830611116237181901081018212529231731126222882525102613&formate=json&secondChannel=BAIDU&lvkey=f0c8625920763182d484fd54192bbe13"
+//
+//#define COLORIMAGE @"http://m.lvmama.com/bullet/index.php?s=/Api/getInfos&stationCode=SH&osVersion=4.4.4&lvversion=7.3.2&tagCodes=NSY_NBA,NSY_NSA,NSY_ACTION_L,NSY_ACTION_R,TJHD&globalLatitude=22.583168&channelCode=NSY&globalLongitude=113.870301&firstChannel=ANDROID&udid=32830611116237181901081018212529231731126222882525102613&formate=json&secondChannel=BAIDU&lvkey=9e324f70acc02f8fb448e7979003468a"
+//
+//
+//#define VOCATION @"http://m.lvmama.com/bullet/index.php?s=/Api/getInfos&stationCode=GD&osVersion=4.4.4&lvversion=7.3.2&tagCodes=NSY_ZM,NSY_CJ&globalLatitude=23.116613&channelCode=NSY&page=1&globalLongitude=112.503564&pageSize=6&firstChannel=ANDROID&udid=32830611116237181901081018212529231731126222882525102613&formate=json&secondChannel=BAIDU&lvkey=f18a287654e8489a3f66090387beeaf9"
+//#define WEEKEND @"http://m.lvmama.com/bullet/index.php?s=/Api/getInfos&stationCode=GD&osVersion=4.4.4&lvversion=7.3.2&tagCodes=NSY_ZM&globalLatitude=23.116689&channelCode=NSY&page=2&globalLongitude=112.503634&pageSize=6&firstChannel=ANDROID&udid=32830611116237181901081018212529231731126222882525102613&formate=json&secondChannel=BAIDU&lvkey=75412478b3b6900530cac325589c7249"
+//#define TOURNOTE @"http://api3g2.lvmama.com/api/router/rest.do?method=api.com.ticket.search.searchTicket&osVersion=4.4.4&lvversion=7.3.2&lvsessionid=4c5dda06-1245-467b-af01-edc5a3e795a3&globalLatitude=23.116042&globalLongitude=112.50367&firstChannel=ANDROID&udid=32830611116237181901081018212529231731126222882525102613&formate=json&secondChannel=BAIDU&lvkey=5f7f247423b655dd6d88a1aeb94d887c&postkey=D2B026651E3EE172393FC5065D9CBDF2"
+
+////  度周末
+//#define VOCATION_ONE @"http://m.lvmama.com/bullet/index.php?s=/Api/getInfos&stationCode=SH&osVersion=4.4.4&lvversion=7.3.2&tagCodes=NSY_ZM&globalLatitude=23.344053&channelCode=NSY&page=%d&globalLongitude=112.708708&pageSize=6&firstChannel=ANDROID&udid=32830611116237181901081018212529231731126222882525102613&formate=json&secondChannel=BAIDU&lvkey=d40dee781557ea2ba80152b74d44ca75"
+////  度长假
+//#define VOCATION_TWO @"http://m.lvmama.com/bullet/index.php?s=/Api/getInfos&stationCode=SH&osVersion=4.4.4&lvversion=7.3.2&tagCodes=NSY_CJ&globalLatitude=23.344053&channelCode=NSY&page=%d&globalLongitude=112.708708&pageSize=6&firstChannel=ANDROID&udid=32830611116237181901081018212529231731126222882525102613&formate=json&secondChannel=BAIDU&lvkey=1b087804712e7b8b1855aabe1fbc5072"
 
 
 /**
  *  测试状态打开LMLog(...)
  *  非测试状态关闭.
  */
-#ifdef DEBUG
-#define LMMLog(...) NSLog(__VA_ARGS__)
+#ifndef LMMog
+#if DEBUG
+#define LMMLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__);
 #else
-#define LMMLog(...)
+#define LMMog(fmt, ...)
 #endif
+
+
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
+
+#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>//引入检索功能所有的头文件
+
+#import <BaiduMapAPI_Cloud/BMKCloudSearchComponent.h>//引入云检索功能所有的头文件
+
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>//引入定位功能所有的头文件
+
+#import <BaiduMapAPI_Utils/BMKUtilsComponent.h>//引入计算工具所有的头文件
+
+#import <BaiduMapAPI_Radar/BMKRadarComponent.h>//引入周边雷达功能所有的头文件
+
+#import <BaiduMapAPI_Map/BMKMapView.h>//只引入所需的单个头文件
 
 /**
  *  AFNetworking框架的配置，解除编译警告
@@ -46,6 +91,10 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 
+/**
+ *  将地址读出/写入.plist文件
+ */
+#import "LMMWriteToPlist.h"
 
 /**
  *  

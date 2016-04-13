@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LMMNavigationBar">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A41-dZ-W3U">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsA-sl-l4c">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="GQB-RB-J6M"/>
+                                <constraint firstAttribute="width" constant="44" id="NrV-ui-CdC"/>
+                            </constraints>
+                            <state key="normal" image="specialPriceBack"/>
+                            <connections>
+                                <action selector="onTapedBack:" destination="iN0-l3-epB" eventType="touchUpInside" id="Nvc-8L-iUL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0H-3G-pP7">
+                            <rect key="frame" x="276" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="dyA-e3-oeH"/>
+                                <constraint firstAttribute="width" constant="44" id="fLb-tq-bqo"/>
+                            </constraints>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPa-2j-mcf">
+                            <rect key="frame" x="44" y="0.0" width="232" height="44"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAi-MF-GJp">
+                                    <rect key="frame" x="8" y="8" width="216" height="28"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="TAi-MF-GJp" secondAttribute="bottom" constant="8" id="4pq-vu-2lo"/>
+                                <constraint firstItem="TAi-MF-GJp" firstAttribute="leading" secondItem="dPa-2j-mcf" secondAttribute="leading" constant="8" id="R7Z-X2-3Wx"/>
+                                <constraint firstAttribute="trailing" secondItem="TAi-MF-GJp" secondAttribute="trailing" constant="8" id="au7-oU-U36"/>
+                                <constraint firstAttribute="height" constant="44" id="gQa-PM-4HA"/>
+                                <constraint firstItem="TAi-MF-GJp" firstAttribute="top" secondItem="dPa-2j-mcf" secondAttribute="top" constant="8" id="iXY-PJ-7ZS"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.82352941176470584" green="0.023529411764705882" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="x0H-3G-pP7" secondAttribute="bottom" id="PpC-XR-u6B"/>
+                        <constraint firstAttribute="bottom" secondItem="xsA-sl-l4c" secondAttribute="bottom" id="dEd-BB-bzv"/>
+                        <constraint firstItem="x0H-3G-pP7" firstAttribute="leading" secondItem="dPa-2j-mcf" secondAttribute="trailing" id="hiR-D4-NHg"/>
+                        <constraint firstItem="xsA-sl-l4c" firstAttribute="leading" secondItem="A41-dZ-W3U" secondAttribute="leading" id="kHK-ei-0Me"/>
+                        <constraint firstAttribute="trailing" secondItem="x0H-3G-pP7" secondAttribute="trailing" id="l67-FN-P0b"/>
+                        <constraint firstItem="dPa-2j-mcf" firstAttribute="leading" secondItem="xsA-sl-l4c" secondAttribute="trailing" id="xSQ-HL-Mfp"/>
+                        <constraint firstAttribute="bottom" secondItem="dPa-2j-mcf" secondAttribute="bottom" id="z5Y-qm-9Jd"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="A41-dZ-W3U" secondAttribute="bottom" id="7eJ-24-40L"/>
+                <constraint firstAttribute="trailing" secondItem="A41-dZ-W3U" secondAttribute="trailing" id="gw4-9z-JGj"/>
+                <constraint firstItem="A41-dZ-W3U" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="n8j-EW-zmw"/>
+                <constraint firstItem="A41-dZ-W3U" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yRH-Zj-I8Y"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="leftButton" destination="xsA-sl-l4c" id="Abk-TO-gLj"/>
+                <outlet property="rightButton" destination="x0H-3G-pP7" id="XHu-6J-006"/>
+                <outlet property="titleLabel" destination="TAi-MF-GJp" id="Xe9-4U-R5a"/>
+                <outlet property="titleView" destination="dPa-2j-mcf" id="Gbj-Sk-iuO"/>
+            </connections>
+            <point key="canvasLocation" x="376" y="189"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="specialPriceBack" width="36" height="36"/>
+    </resources>
+</document>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ARActiviteItemView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVN-NP-dQw">
+                    <rect key="frame" x="16" y="4" width="288" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="6gv-eZ-9ks"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Huc-zo-DGx">
+                    <rect key="frame" x="16" y="22" width="296" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultActionLLoading" translatesAutoresizingMaskIntoConstraints="NO" id="0fg-7P-Czy">
+                    <rect key="frame" x="16" y="40" width="140" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="DBb-xR-n2j"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IPS-Y5-wMS">
+                    <rect key="frame" x="164" y="40" width="148" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="148" id="QCq-PQ-WrY"/>
+                        <constraint firstAttribute="height" constant="75" id="gXL-yA-lNT"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0fg-7P-Czy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="8RZ-tw-1To"/>
+                <constraint firstItem="IPS-Y5-wMS" firstAttribute="top" secondItem="Huc-zo-DGx" secondAttribute="bottom" constant="1" id="B5q-YE-qFh"/>
+                <constraint firstItem="0fg-7P-Czy" firstAttribute="top" secondItem="Huc-zo-DGx" secondAttribute="bottom" constant="1" id="HKT-6Y-aGY"/>
+                <constraint firstItem="IPS-Y5-wMS" firstAttribute="top" secondItem="Huc-zo-DGx" secondAttribute="bottom" constant="1" id="PgW-jH-wLY"/>
+                <constraint firstAttribute="bottom" secondItem="IPS-Y5-wMS" secondAttribute="bottom" constant="4" id="Sud-To-hXF"/>
+                <constraint firstItem="XVN-NP-dQw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="UXl-W4-lQT"/>
+                <constraint firstItem="IPS-Y5-wMS" firstAttribute="leading" secondItem="0fg-7P-Czy" secondAttribute="trailing" constant="8" id="aD4-BF-ItN"/>
+                <constraint firstAttribute="trailing" secondItem="Huc-zo-DGx" secondAttribute="trailing" constant="8" id="eUt-K2-a7y"/>
+                <constraint firstItem="Huc-zo-DGx" firstAttribute="top" secondItem="XVN-NP-dQw" secondAttribute="bottom" constant="1" id="f6e-vj-WFA"/>
+                <constraint firstItem="Huc-zo-DGx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="fFl-r3-Rwn"/>
+                <constraint firstAttribute="bottom" secondItem="0fg-7P-Czy" secondAttribute="bottom" constant="4" id="hK7-we-Cdc"/>
+                <constraint firstItem="XVN-NP-dQw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="k9D-in-0CO"/>
+                <constraint firstAttribute="trailing" secondItem="IPS-Y5-wMS" secondAttribute="trailing" constant="8" id="kGe-XS-eKL"/>
+                <constraint firstAttribute="trailing" secondItem="XVN-NP-dQw" secondAttribute="trailing" constant="16" id="pAz-Nl-Bau"/>
+                <constraint firstItem="IPS-Y5-wMS" firstAttribute="leading" secondItem="0fg-7P-Czy" secondAttribute="trailing" constant="8" id="xKY-PI-CI9"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageOfFirst" destination="0fg-7P-Czy" id="Bor-Rb-4sj"/>
+                <outlet property="imageOfSecond" destination="IPS-Y5-wMS" id="q2d-Oz-vaj"/>
+                <outlet property="labelOfItemName" destination="XVN-NP-dQw" id="xy5-bR-g87"/>
+                <outlet property="labelOfMessage" destination="Huc-zo-DGx" id="arN-Jd-RuT"/>
+            </connections>
+            <point key="canvasLocation" x="516" y="263"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="defaultActionLLoading" width="621" height="447"/>
+    </resources>
+</document>

@@ -11,6 +11,14 @@
             continueAfterRunningActions = "No"
             scope = "0"
             stopOnStyle = "0">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -19,13 +27,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "lvmamaTourist/Classes/Home/Controller/HomeViewController.m"
-            timestampString = "471180418.977953"
+            filePath = "lvmamaTourist/Classes/MicroTour/OtherPages/Model/TableModel.m"
+            timestampString = "478575454.186352"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "-analizeDictionaryToModel:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lvmamaTourist/Classes/Around/OtherPage/Controller/ARPlaceIntroductTableViewController.m"
+            timestampString = "478663692.74805"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-callbackWithResult:forSid:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lvmamaTourist/Classes/Around/OtherPage/Controller/ARPlaceIntroductTableViewController.m"
+            timestampString = "478663693.830836"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "-callbackWhenError:forSid:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

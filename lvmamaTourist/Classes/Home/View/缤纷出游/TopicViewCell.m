@@ -15,9 +15,6 @@
 @property (weak, nonatomic  ) IBOutlet UIImageView        *topicOne;
 @property (weak, nonatomic  ) IBOutlet UIImageView        *topicTwo;
 @property (weak, nonatomic  ) IBOutlet UIImageView        *topicThree;
-@property (weak, nonatomic  ) IBOutlet UIImageView        *topicFour;
-@property (weak, nonatomic  ) IBOutlet UIImageView        *topicFive;
-@property (weak, nonatomic  ) IBOutlet UIImageView        *topicSix;
 
 @property (weak, nonatomic  ) IBOutlet NSLayoutConstraint *colorfulHeight;
 
@@ -34,7 +31,7 @@
 {
     if (!_imageArray)
     {
-        _imageArray = [NSMutableArray arrayWithObjects:self.topicOne,self.topicTwo,self.topicThree,self.topicFour,self.topicFive.self,self.topicSix,nil];
+        _imageArray = [NSMutableArray arrayWithObjects:self.topicOne,self.topicTwo,self.topicThree,nil];
     }
     return _imageArray;
 }
@@ -52,10 +49,11 @@
 - (void)setTopicImage:(NSMutableArray *)imageData
 {
 
-    self.colorfulHeight.constant     = WIDTH * 10 / 60;
-    self.selectionStyle              = UITableViewCellSelectionStyleNone;
+//    self.colorfulHeight.constant     = WIDTH / 6;
+//    self.selectionStyle              = UITableViewCellSelectionStyleNone;
     self.backgroundColor             = [UIColor clearColor] ;
 
+    
     for (int i = 0 ; i < imageData.count ; i ++)
     {
         LMMTapGestureRecognizer *gesture = [[LMMTapGestureRecognizer alloc]initWithTarget:self action:@selector(onClick:)];

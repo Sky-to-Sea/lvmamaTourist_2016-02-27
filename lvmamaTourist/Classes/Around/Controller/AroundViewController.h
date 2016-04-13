@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AroundViewController : UIViewController
+@interface AroundViewController : UITableViewController
+
 
 @end

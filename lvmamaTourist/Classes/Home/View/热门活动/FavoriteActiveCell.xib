@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="332" id="KGk-i7-Jjw" customClass="FavoriteActiveCell">
+            <rect key="frame" x="0.0" y="0.0" width="459" height="384"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="459" height="383"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7cs-b6-UvV">
+                        <rect key="frame" x="-1" y="35" width="461" height="84"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="84" id="00x-Up-jx7"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                <color key="value" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TzA-g4-O1S">
+                        <rect key="frame" x="-1" y="118" width="461" height="84"/>
+                        <animations/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                <color key="value" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2pg-Vb-6Xz">
+                        <rect key="frame" x="-1" y="201" width="461" height="84"/>
+                        <animations/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                <color key="value" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bU4-oo-u2D">
+                        <rect key="frame" x="-1" y="284" width="461" height="84"/>
+                        <animations/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                <color key="value" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="热门活动" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mj-Ti-rDi">
+                        <rect key="frame" x="8" y="8" width="68" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.37676282051282051" green="0.37676282051282051" blue="0.37676282051282051" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="7cs-b6-UvV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-1" id="4LP-3V-rgg"/>
+                    <constraint firstItem="TzA-g4-O1S" firstAttribute="height" secondItem="7cs-b6-UvV" secondAttribute="height" id="5t4-uo-5Xg"/>
+                    <constraint firstItem="bU4-oo-u2D" firstAttribute="height" secondItem="7cs-b6-UvV" secondAttribute="height" id="69g-be-luV"/>
+                    <constraint firstItem="2pg-Vb-6Xz" firstAttribute="height" secondItem="7cs-b6-UvV" secondAttribute="height" id="7tF-Fo-sb5"/>
+                    <constraint firstItem="TzA-g4-O1S" firstAttribute="top" secondItem="7cs-b6-UvV" secondAttribute="bottom" constant="-1" id="8zS-Rp-ryP"/>
+                    <constraint firstAttribute="trailing" secondItem="bU4-oo-u2D" secondAttribute="trailing" constant="-1" id="F8R-ni-mWC"/>
+                    <constraint firstAttribute="trailing" secondItem="2pg-Vb-6Xz" secondAttribute="trailing" constant="-1" id="FER-Ar-z85"/>
+                    <constraint firstItem="2pg-Vb-6Xz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-1" id="GYY-gx-t7K"/>
+                    <constraint firstItem="bU4-oo-u2D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-1" id="HW2-01-osV"/>
+                    <constraint firstItem="2pg-Vb-6Xz" firstAttribute="top" secondItem="TzA-g4-O1S" secondAttribute="bottom" constant="-1" id="LbK-gw-2oE"/>
+                    <constraint firstItem="bU4-oo-u2D" firstAttribute="top" secondItem="2pg-Vb-6Xz" secondAttribute="bottom" constant="-1" id="OwU-ef-Cqh"/>
+                    <constraint firstAttribute="bottom" secondItem="bU4-oo-u2D" secondAttribute="bottom" constant="15" id="PqP-bn-Yjr"/>
+                    <constraint firstItem="bU4-oo-u2D" firstAttribute="top" secondItem="2pg-Vb-6Xz" secondAttribute="bottom" constant="-1" id="UsW-9R-0ho"/>
+                    <constraint firstItem="TzA-g4-O1S" firstAttribute="width" secondItem="7cs-b6-UvV" secondAttribute="width" id="WiM-kt-jEI"/>
+                    <constraint firstItem="TzA-g4-O1S" firstAttribute="top" secondItem="7cs-b6-UvV" secondAttribute="bottom" constant="-1" id="Z6E-X1-xz5"/>
+                    <constraint firstAttribute="trailing" secondItem="TzA-g4-O1S" secondAttribute="trailing" constant="-1" id="aeC-yn-a7w"/>
+                    <constraint firstItem="bU4-oo-u2D" firstAttribute="width" secondItem="7cs-b6-UvV" secondAttribute="width" id="ffr-Ch-8Va"/>
+                    <constraint firstAttribute="trailing" secondItem="7cs-b6-UvV" secondAttribute="trailing" constant="-1" id="gJi-XL-KgZ"/>
+                    <constraint firstItem="TzA-g4-O1S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-1" id="gzI-Bk-Bbu"/>
+                    <constraint firstItem="2pg-Vb-6Xz" firstAttribute="width" secondItem="7cs-b6-UvV" secondAttribute="width" id="hIy-16-EJh"/>
+                    <constraint firstItem="7cs-b6-UvV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="jhH-Q7-QC4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="itemFour" destination="bU4-oo-u2D" id="zMk-v0-J3c"/>
+                <outlet property="itemOne" destination="7cs-b6-UvV" id="D7c-jU-c1q"/>
+                <outlet property="itemThree" destination="2pg-Vb-6Xz" id="r1G-h3-nSe"/>
+                <outlet property="itemTwo" destination="TzA-g4-O1S" id="tTo-U9-6hI"/>
+            </connections>
+            <point key="canvasLocation" x="625.5" y="387"/>
+        </tableViewCell>
+    </objects>
+</document>

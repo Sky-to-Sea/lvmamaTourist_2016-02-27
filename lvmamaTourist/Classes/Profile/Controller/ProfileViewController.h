@@ -1,13 +1,16 @@
 //
-//  ProfileViewController.h
-//  lvmama
+//  LMProfileViewController.h
+//  lvmamaTourist
 //
-//  Created by Earth on 15/11/17.
-//  Copyright © 2015年 Earth. All rights reserved.
+//  Created by Earth on 16/3/1.
+//  Copyright © 2016年 Earth. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface ProfileViewController : UIViewController
+
+
 
 @end

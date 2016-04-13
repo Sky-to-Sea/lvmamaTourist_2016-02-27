@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TNHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dayOneImage" translatesAutoresizingMaskIntoConstraints="NO" id="GL1-D8-fRh">
+                    <rect key="frame" x="24" y="-1" width="13" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="13" id="UUb-Nd-PGq"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPL-CR-bNY">
+                    <rect key="frame" x="82" y="13" width="8" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016年02月18日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KX1-sg-KKy">
+                    <rect key="frame" x="98" y="14" width="100" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgc-vC-soT">
+                    <rect key="frame" x="45" y="13" width="29" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Mgc-vC-soT" firstAttribute="leading" secondItem="GL1-D8-fRh" secondAttribute="trailing" constant="8" id="3PB-1J-Tr8"/>
+                <constraint firstItem="GL1-D8-fRh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-1" id="Kpv-nC-k3h"/>
+                <constraint firstItem="KX1-sg-KKy" firstAttribute="leading" secondItem="JPL-CR-bNY" secondAttribute="trailing" constant="8" id="MkY-1A-CML"/>
+                <constraint firstItem="Mgc-vC-soT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="WA2-yb-Owt"/>
+                <constraint firstItem="KX1-sg-KKy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hEF-UU-Esf"/>
+                <constraint firstItem="JPL-CR-bNY" firstAttribute="leading" secondItem="Mgc-vC-soT" secondAttribute="trailing" constant="8" id="map-pN-iIA"/>
+                <constraint firstItem="GL1-D8-fRh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="nw6-PL-DCb"/>
+                <constraint firstAttribute="bottom" secondItem="GL1-D8-fRh" secondAttribute="bottom" constant="-1" id="qha-yt-SxZ"/>
+                <constraint firstItem="JPL-CR-bNY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="snQ-9e-Amc"/>
+                <constraint firstItem="GL1-D8-fRh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="xwx-Zc-goP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dayOfTravelDay" destination="KX1-sg-KKy" id="4FW-gy-Nnb"/>
+                <outlet property="numberOfDay" destination="JPL-CR-bNY" id="aZu-Xd-lDz"/>
+            </connections>
+            <point key="canvasLocation" x="536" y="354"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dayOneImage" width="16" height="54"/>
+    </resources>
+</document>

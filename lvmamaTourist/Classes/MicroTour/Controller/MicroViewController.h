@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Data_TourNote.h"
 
-@interface MicroViewController : UIViewController
+@interface MicroViewController : UITableViewController
 
 @end

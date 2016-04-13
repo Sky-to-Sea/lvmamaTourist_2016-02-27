@@ -73,10 +73,10 @@
 - (void) animation:(UIView *)view
 {
     
-
-    [UIView animateWithDuration:0.5 animations:^{
-        view.alpha = 0;
-        view.transform = CGAffineTransformMakeScale(3, 3);
+    [view.superview bringSubviewToFront:view];
+    [UIView animateWithDuration:0.2 animations:^{
+        view.alpha = 0.7;
+        view.transform = CGAffineTransformMakeScale(1.3,1.3);
     } completion:^(BOOL finished) {
         if (finished)
         {

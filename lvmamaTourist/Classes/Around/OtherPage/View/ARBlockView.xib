@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ARBlockView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeDetailIcon2" translatesAutoresizingMaskIntoConstraints="NO" id="6vA-5p-Yaa">
+                    <rect key="frame" x="16" y="8" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="Aff-II-1QG"/>
+                        <constraint firstAttribute="width" constant="16" id="R1d-Ju-NbM"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推荐理由" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsi-uf-KHc">
+                    <rect key="frame" x="36" y="8" width="276" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="Tb5-TB-f7A"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dottedLineImage" translatesAutoresizingMaskIntoConstraints="NO" id="Zzk-Xf-ysZ">
+                    <rect key="frame" x="16" y="28" width="304" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="lel-9r-k1B"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upX-A7-EEW">
+                    <rect key="frame" x="16" y="33" width="288" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vsi-uf-KHc" secondAttribute="trailing" constant="8" id="3rK-0x-z7a"/>
+                <constraint firstAttribute="trailing" secondItem="Zzk-Xf-ysZ" secondAttribute="trailing" id="4vM-f1-uP2"/>
+                <constraint firstItem="Zzk-Xf-ysZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="AXi-4Y-EcK"/>
+                <constraint firstItem="Zzk-Xf-ysZ" firstAttribute="top" secondItem="vsi-uf-KHc" secondAttribute="bottom" constant="3" id="FWw-oG-8pW"/>
+                <constraint firstAttribute="bottom" secondItem="upX-A7-EEW" secondAttribute="bottom" constant="4" id="Q6U-6m-fGV"/>
+                <constraint firstItem="vsi-uf-KHc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Rqc-hu-kC6"/>
+                <constraint firstAttribute="trailing" secondItem="upX-A7-EEW" secondAttribute="trailing" constant="16" id="VIG-Ex-qQn"/>
+                <constraint firstItem="upX-A7-EEW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="cuD-I0-Sa8"/>
+                <constraint firstItem="vsi-uf-KHc" firstAttribute="leading" secondItem="6vA-5p-Yaa" secondAttribute="trailing" constant="4" id="ggJ-xW-Qhw"/>
+                <constraint firstItem="6vA-5p-Yaa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="jBN-5Q-tAN"/>
+                <constraint firstItem="upX-A7-EEW" firstAttribute="top" secondItem="Zzk-Xf-ysZ" secondAttribute="bottom" constant="4" id="mRb-fC-Oge"/>
+                <constraint firstItem="6vA-5p-Yaa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="nHa-Xe-X0T"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageNote" destination="6vA-5p-Yaa" id="RKB-2C-3t2"/>
+                <outlet property="labelMessage" destination="upX-A7-EEW" id="qLb-fb-wpF"/>
+                <outlet property="labelOfTexts" destination="upX-A7-EEW" id="xg4-NO-6f9"/>
+                <outlet property="labelTitle" destination="vsi-uf-KHc" id="nZ7-k0-BYV"/>
+            </connections>
+            <point key="canvasLocation" x="538" y="227"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dottedLineImage" width="292" height="1"/>
+        <image name="placeDetailIcon2" width="16" height="16"/>
+    </resources>
+</document>
