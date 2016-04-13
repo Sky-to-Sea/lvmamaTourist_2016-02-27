@@ -34,7 +34,7 @@
                                         <action selector="onTapBack:" destination="-1" eventType="touchUpInside" id="kH6-Sr-dvl"/>
                                     </connections>
                                 </button>
-                                <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QCb-mr-BYe">
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCb-mr-BYe">
                                     <rect key="frame" x="48" y="8" width="256" height="28"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="searchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="a30-qk-CXc">
@@ -59,9 +59,13 @@
                             </subviews>
                             <color key="backgroundColor" red="0.80000000000000004" green="0.12549019610000001" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
+                                <constraint firstAttribute="trailing" secondItem="QCb-mr-BYe" secondAttribute="trailing" constant="16" id="50j-dG-Ocg"/>
                                 <constraint firstItem="GMR-m4-LLZ" firstAttribute="centerY" secondItem="8iy-4I-Q27" secondAttribute="centerY" id="DfD-Na-2g2"/>
+                                <constraint firstItem="QCb-mr-BYe" firstAttribute="top" secondItem="8iy-4I-Q27" secondAttribute="top" constant="8" id="HyK-li-MF3"/>
+                                <constraint firstItem="QCb-mr-BYe" firstAttribute="leading" secondItem="GMR-m4-LLZ" secondAttribute="trailing" constant="8" id="JgU-ee-YUB"/>
                                 <constraint firstAttribute="height" constant="44" id="P22-c4-pbN"/>
                                 <constraint firstItem="GMR-m4-LLZ" firstAttribute="leading" secondItem="8iy-4I-Q27" secondAttribute="leading" constant="4" id="fW2-FJ-Rpe"/>
+                                <constraint firstAttribute="bottom" secondItem="QCb-mr-BYe" secondAttribute="bottom" constant="8" id="gXY-kD-XtN"/>
                             </constraints>
                         </view>
                     </subviews>

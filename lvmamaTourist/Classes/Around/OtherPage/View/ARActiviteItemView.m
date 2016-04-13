@@ -16,7 +16,7 @@
     ARActiviteItemView *view = [[[NSBundle mainBundle] loadNibNamed:@"ARActiviteItemView" owner:nil options:nil] lastObject];
     view.labelOfItemName.text = dataModel.spotName;
     view.labelOfMessage.text = dataModel.spotDesc;
-
+    view.width = WIDTH;
     
     ClientImageBaseVosModel *imageModel1 = nil;
     ClientImageBaseVosModel *imageModel2 = nil;
@@ -38,7 +38,7 @@
     
 //    view.labelOfMessage.height = [self describeLabel:dataModel.spotDesc];
     
-    view.height = [self describeLabel:dataModel.spotDesc] + 130;
+    view.height = [self describeLabel:dataModel.spotDesc] + 155;
     
     return view;
 }

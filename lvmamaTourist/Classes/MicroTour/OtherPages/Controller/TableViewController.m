@@ -165,6 +165,9 @@
     _bar.titleLabel.text = @"游记详情";
     _bar.titleLabel.textAlignment = NSTextAlignmentCenter;
     _bar.tag = 100;
+    _bar.backgroundColor = [UIColor clearColor];
+    
+    _bar.frame = CGRectMake(0, 0, WIDTH, _bar.frame.size.height);
     
     [_bar.leftButton addTarget:self action:@selector(onBackTap:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -201,7 +204,6 @@
     }
     
     //  取出所有的数据
-   
     for (NSDictionary *dic in result.data[@"data"][@"tripDays"])
     {
         TNTripDaysModel *model = [[TNTripDaysModel alloc]init];

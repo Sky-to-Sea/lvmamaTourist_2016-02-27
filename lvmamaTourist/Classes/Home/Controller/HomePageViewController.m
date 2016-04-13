@@ -48,13 +48,13 @@
 
 @property (nonatomic, strong) BMKLocationService *locationService;
 
+
 //  是不是不刷新
 @property (nonatomic, assign) BOOL no_change;
 
 @end
 
 @implementation HomePageViewController
-
 
 - (BMKLocationService *)locationService
 {
@@ -302,6 +302,7 @@
         scrollImageView_new *newScroll = [[scrollImageView_new alloc]initWithFrame:self.contentViewOfScrollView.frame];
         newScroll.tag = 101;
         [newScroll setScrollViewImage:scrollSource withController:self];
+        newScroll.frame = self.contentViewOfScrollView.frame;
         [self.contentViewOfScrollView addSubview:newScroll];
     }
     
@@ -314,16 +315,28 @@
         
         NSMutableArray *colorfulSource = [TopicModel analyzeJsonWithData:result.data[@"datas"][3][@"infos"]];
         TopicView_new *newColorful = [TopicView_new colorfulView];
+        
         [newColorful setViewWithData:colorfulSource withController:self];
+        
+        CGRect rect = self.contentViewOfColorfulView.frame;
+        rect.origin = newColorful.frame.origin;
+        newColorful.frame = rect;
+        
         [self.contentViewOfColorfulView addSubview:newColorful];
         
         for (UIView *view in self.contentViewOfSpecialView.subviews)
         {
             [view removeFromSuperview];
         }
+        
         NSMutableArray *specialSource = [TopicModel analyzeJsonWithData:result.data[@"datas"][4][@"infos"]];
         SpecialView_new *newSpecial = [SpecialView_new specialView];
         [newSpecial setSmallImage:specialSource withController:self];
+        
+        CGRect rectt = self.contentViewOfSpecialView.frame;
+        rectt.origin = newSpecial.frame.origin;
+        newSpecial.frame = rectt;
+        
         [self.contentViewOfSpecialView addSubview:newSpecial];
     }
     
@@ -352,9 +365,6 @@
         
         self.dataSource = [NSMutableArray arrayWithArray:[self tempWithDataArray:self.sourceTwo]];
         
-//        [self.tableView reloadData];
-        
-//        [self finish];
         _pageTwo ++;
     }
 }

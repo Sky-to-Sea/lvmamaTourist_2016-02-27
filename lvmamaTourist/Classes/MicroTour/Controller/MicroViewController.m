@@ -184,7 +184,7 @@
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 80, 30)];
     label.textColor = [UIColor whiteColor];
     label.text = @"游记";
-    label.font = [UIFont boldSystemFontOfSize:18];
+    label.font = [UIFont boldSystemFontOfSize:22];
     label.textAlignment = NSTextAlignmentCenter;
     self.navigationItem.titleView = label;
 }

@@ -15,6 +15,7 @@
     ARBlockView2 *view = [[[NSBundle mainBundle] loadNibNamed:@"ARBlockView2" owner:nil options:nil] lastObject];
     
     view.height = height + 50;
+    view.width = WIDTH;
     
     return view;
 }

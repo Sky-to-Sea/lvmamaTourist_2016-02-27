@@ -14,6 +14,7 @@
 {
     ARBlockView *view = [[[NSBundle mainBundle] loadNibNamed:@"ARBlockView" owner:nil options:nil] lastObject];
     view.height = height + 36;
+    view.width = WIDTH;
     return view;
 }
 

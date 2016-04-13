@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.view layoutIfNeeded];
+    
     _scrollView.delegate = self;
     
     NSMutableArray *imagesName = [[NSMutableArray alloc]initWithObjects:@"001",@"002",@"003",@"004", nil];
@@ -43,7 +45,7 @@
         }
     }
     
-    _pageCtl = [[UIPageControl alloc]initWithFrame:CGRectMake((WIDTH - 80) / 2, HEIGHT - 30, 80, 30)];
+    _pageCtl = [[UIPageControl alloc]initWithFrame:CGRectMake((WIDTH - 80) / 2 - 40 , HEIGHT - 30, 80, 30)];
     _pageCtl.numberOfPages = imagesName.count;
     [self.view addSubview:_pageCtl];
     
